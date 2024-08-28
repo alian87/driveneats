@@ -101,10 +101,10 @@ img{
 }
 
 .check-icon {
-    float: right; /* Alinha o ícone à direita */
+    float: right;
     color: green;
-    display: none; /* Oculta o ícone inicialmente */
-    font-size: 16px; /* Ajuste o tamanho conforme necessário */
+    display: none;
+    font-size: 16px;
 }
 
 .footer {
