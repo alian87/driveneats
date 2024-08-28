@@ -1,0 +1,261 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #EEEEEE;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #CF2B2B;
+    color: white;
+    text-align: left;
+    padding: 10px 20px;
+    font-family: 'Righteous', cursive;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+header > h1{
+    font-size: 40px;
+}
+
+header > p{
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+}
+
+.content {
+    padding-bottom: 100px;
+}
+
+.category:first-of-type {
+    margin-top: 100px;
+}
+
+.category {
+    margin-top: 10px;
+    padding: 10px 20px;
+}
+
+.category-title {
+    font-family: 'Righteous', cursive;
+    font-size: 25px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.item-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+}
+
+.item {
+    flex: 0 0 auto;
+    width: 135px;
+    background-color: white;
+    border: 4px solid transparent;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    padding: 0 10px ;
+    cursor: pointer;
+}
+
+.item.selected {
+    border: 4px solid #32B72F;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+img{
+    height: 100px;
+}
+
+.item h3 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.item p {
+    color: #777;
+    font-size: 14px;
+    margin: 0;
+    padding: 4px 0;
+}
+
+.item .price {
+    margin: 0 0;
+    padding: 10px 0;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+}
+
+.check-icon {
+    float: right; /* Alinha o ícone à direita */
+    color: green;
+    display: none; /* Oculta o ícone inicialmente */
+    font-size: 16px; /* Ajuste o tamanho conforme necessário */
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 20px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer button {
+    padding: 10px 90px;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: #ccc;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+.footer button.enabled {
+    background-color: #32B72F;
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: #50D074;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+}
+
+.modal-content > h3{
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.modal button {
+    margin-top: 10px;
+    padding: 10px 45px;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#orderDetails > p {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+
+#orderDetails > p span {
+    flex: 1;
+    padding: 4px 0;
+}
+
+#orderTotal {
+    padding: 4px 0;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-name {
+    text-align: left;
+    flex: 1;
+}
+
+.item-price {
+    text-align: right;
+}
+
+.confirm {
+    background: #fff;
+    color: #28a745;
+}
+
+.cancel {
+    color: white;
+    background-color: transparent;
+}
+
+@media (max-width: 425px) {
+    .footer button {
+        padding: 10px 90px;
+    }
+}
+
+@media (max-width: 405px) {
+    .footer button {
+        padding: 10px 80px;
+    }
+    .modal button {
+        padding: 10px 35px;
+    }
+}
+
+@media (max-width: 385px) {
+    .footer button {
+        padding: 10px 70px;
+    }
+    .modal button {
+        padding: 10px 25px;
+    }    
+}
+
+@media (max-width: 365px) {
+    .footer button {
+        padding: 10px 60px;
+    }
+    .modal button {
+        padding: 10px 15px;
+    }    
+}
+
+@media (max-width: 345px) {
+    .footer button {
+        padding: 10px 50px;
+    }
+    .modal button {
+        padding: 10px 5px;
+    }    
+}
+
+@media (max-width: 325px) {
+    .footer button {
+        padding: 10px 40px;
+    }
+}
+
+@media (max-width: 305px) {
+    .footer button {
+        padding: 10px 30px;
+    }
+}

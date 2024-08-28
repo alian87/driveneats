@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrivenEats</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+
+    <header>
+        <h1>DrivenEats</h1>
+        <p>Sua comida em 6 minutos</p>
+    </header>
+    <div class="content">
+        <div class="category">
+            <h2 class="category-title">Primeiro, seu prato</h2>
+            <div class="item-container">
+
+                <div class="item" data-category="prato" data-name="Frango Yin Yang" data-price="14.90">
+                    <img src="./img/prato/pf_frango.jpg" alt="Frango">
+                    <h3>Frango Yin Yang</h3>
+                    <p>Um pouco de batata, um pouco de salada</p>
+                    <p class="price">
+                        R$ 14,90
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+                    </p>
+                </div>
+
+                <div class="item" data-category="prato" data-name="Carne" data-price="21.40">
+                    <img src="./img/prato/pf_carne.jpg" alt="Carne">
+                    <h3>Carne</h3>
+                    <p>Um pouco de batata, salada e ovo</p>
+                    <p class="price">
+                        R$ 21,40
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+                    </p>
+                </div>
+
+                <div class="item" data-category="prato" data-name="Calabresa" data-price="18.25">
+                    <img src="./img/prato/pf_calabresa.png" alt="calabresa">
+                    <h3>Calabresa</h3>
+                    <p>Um pouco de batata, arroz e cebola</p>
+                    <p class="price">
+                        R$ 18,25
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+                    </p>
+                </div>            
+
+            </div>
+        </div>
+
+        <div class="category">
+            <h2 class="category-title">Agora, sua bebida</h2>
+            <div class="item-container">
+
+                <div class="item" data-category="bebida" data-name="Coquinha Gelada" data-price="7.90">
+                    <img src="./img/bebida/coca.png" alt="Coquinha">
+                    <h3>Coquinha Gelada</h3>
+                    <p>Lata 350ml</p>
+                    <p class="price">
+                        R$ 7,90
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+                    </p>
+                </div>
+
+                <div class="item" data-category="bebida" data-name="Fanta Gelada" data-price="6.70">
+                    <img src="./img/bebida/fanta.png" alt="Fanta">
+                    <h3>Fanta Gelada</h3>
+                    <p>Lata 350ml</p>
+                    <p class="price">
+                        R$ 6,70
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+                    </p>
+                </div>
+
+                <div class="item" data-category="bebida" data-name="Suco Gelado" data-price="4.90">
+                    <img src="./img/bebida/suco.png" alt="Suco">
+                    <h3>Suco Gelado</h3>
+                    <p>Copo 300ml</p>
+                    <p class="price">
+                        R$ 4,90
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+                    </p>
+                </div>            
+
+            </div>
+        </div>
+
+        <div class="category">
+            <h2 class="category-title">Por fim, sua sobremesa</h2>
+            <div class="item-container">
+
+                <div class="item" data-category="sobremesa" data-name="Pudim" data-price="10.50">
+                    <img src="./img/sobremesa/pudim.jpg" alt="Pudim">
+                    <h3>Pudim</h3>
+                    <p>Apenas pudim</p>
+                    <p class="price">
+                        R$ 10,50
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+                    </p>
+                </div>
+
+                <div class="item" data-category="sobremesa" data-name="Mousse" data-price="8.75">
+                    <img src="./img/sobremesa/mouse.jpg" alt="Pudim">
+                    <h3>Mousse</h3>
+                    <p>Mousse de maracujá</p>
+                    <p class="price">
+                        R$ 8,75
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+                    </p>
+                </div>
+
+                <div class="item" data-category="sobremesa" data-name="Brownie" data-price="12.30">
+                    <img src="./img/sobremesa/brownie.jpg" alt="Pudim">
+                    <h3>Brownie</h3>
+                    <p>Um delicioso brownie</p>
+                    <p class="price">
+                        R$ 12,30
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+                    </p>
+                </div>            
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <button id="finalizeOrder" disabled>Selecione os 3 itens para fechar o pedido</button>
+    </div>
+
+    <div class="modal" id="orderModal">
+        <div class="modal-content">
+            <h3>Confirme seu pedido</h3>
+            <div id="orderDetails"></div>
+            <p id="orderTotal"></p>
+            <button class="confirm" id="confirmOrder">Tudo certo, pode pedir!</button>
+            <button class="cancel" id="cancelOrder">Cancelar</button>
+        </div>
+    </div>
+</body>
+<script src="./js/script.js"></script>
+</html>
